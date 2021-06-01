@@ -30,3 +30,7 @@ get_last_cmd_pid() {
 am_i_root() {
     [[ $(id -u) -eq 0 ]];
 }
+
+log_with_my_pid() {
+    printf "[PID %d] %s\n" $(get_my_pid) "$@"
+}
