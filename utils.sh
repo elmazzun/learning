@@ -28,5 +28,5 @@ get_last_cmd_pid() {
 }
 
 am_i_root() {
-	[[ $(id -u) -eq 0 ]];
+    [[ $(id -u) -eq 0 ]];
 }
