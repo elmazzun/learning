@@ -16,15 +16,15 @@ ok() {
 }
 
 get_my_pid() {
-    printf "%s\n" $$
+    printf "%d\n" $$
 }
 
 get_my_parent_pid() {
-    printf "%s\n" $PPID
+    printf "%d\n" $PPID
 }
 
 get_last_cmd_pid() {
-    printf "%s\n" $!
+    printf "%d\n" $!
 }
 
 am_i_root() {
