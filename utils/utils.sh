@@ -1,3 +1,6 @@
+# This file is not meant to be executed: it is just a utils BASH file to be
+# included in other scripts.
+
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[0;33m'
