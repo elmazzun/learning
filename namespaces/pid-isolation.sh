@@ -8,7 +8,7 @@ set -eu
 # Since Linux 3.7, the kernel limits the maximum nesting depth for PID
 # namespaces to 32.
 
-source ../utils.sh
+source ../utils/utils.sh
 
 log_with_my_pid "Before unsharing PID namespace"
 
@@ -17,7 +17,7 @@ sudo unshare \
     --pid \
     --mount-proc \
     bash -c \
-        'source ../utils.sh && \
+        'source ../utils/utils.sh && \
         log_with_my_pid "PID namespace: listing current processes..." && \
         ps aux && \
         log_with_my_pid "Quitting PID namespace..." && \
