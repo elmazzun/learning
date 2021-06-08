@@ -10,3 +10,4 @@ ssh \
 # Solution:
 # you may type 'cat' and then just Tab using autocompletition
 # or prepending each space in the file name with a backslash
+# or enclosing the whole file name with quotation marks.

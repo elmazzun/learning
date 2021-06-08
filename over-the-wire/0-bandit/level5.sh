@@ -15,4 +15,3 @@ ssh \
 # ./inhere/maybehere07/.file2: ASCII text, with very long lines
 #     That's it ^^^ but I want just the file name
 # bandit5@bandit:~$ cat $(find ./inhere/ -type f -size 1033c ! -executable -exec file {} + | cut -d ':' -f 1)
-# DXjZPULLxYr17uwoI01bNLQbtFemEgo7
