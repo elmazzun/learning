@@ -20,6 +20,8 @@ Linux. Each directory contains a precise topic.
 
     better to remember the fundamentals and not to leave gaps in knowledge.
 
+  * `natas`: serverside web-security
+
 ## Misc
 
 * I adhere to [Semantic Commit Messages](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716)
