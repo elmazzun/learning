@@ -1,0 +1,5 @@
+# Compile the module as instructed in this file
+
+EXTRA_CFLAGS = -Wall -g
+
+obj-m        = hello.o

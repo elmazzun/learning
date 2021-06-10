@@ -1,5 +1,10 @@
+#include <linux/kernel.h>
 #include <linux/init.h>
 #include <linux/module.h>
+
+MODULE_LICENSE("GPL");
+MODULE_AUTHOR("elmazzun");
+MODULE_DESCRIPTION("Say hello");
 
 static int hello_init(void)
 {
@@ -14,4 +19,3 @@ static void hello_exit(void)
 
 module_init(hello_init);
 module_exit(hello_exit);
-MODULE_LICENSE("GPL");
