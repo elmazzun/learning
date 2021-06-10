@@ -37,3 +37,11 @@ am_i_root() {
 log_with_my_pid() {
     printf "[PID %d] %s\n" $(get_my_pid) "$@"
 }
+
+# By stracing "lsns", I saw that it iterates over all /proc directories
+# containing details about running processes.
+what_are_my_ns_proc() {
+    local my_pid
+    my_pid=$(get_my_pid)
+    ls -la /proc/$my_pid/ns
+}
