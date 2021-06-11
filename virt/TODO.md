@@ -1,0 +1,9 @@
+https://serverfault.com/questions/306019/simulate-internet-routers-dns-in-a-lab
+https://packetlife.net/blog/2011/jan/12/emulating-wans-wanem/
+https://www.reddit.com/r/networking/comments/fcojvw/simulate_latency_between_two_virtualbox_vms/
+https://www.brianlinkletter.com/open-source-network-simulators/
+https://netbeez.net/blog/how-to-use-the-linux-traffic-control/
+http://www.ibiblio.org/pub/linux/docs/howto/other-formats/html_single/IP-Masquerade-HOWTO.html
+https://stackoverflow.com/questions/35852876/is-there-a-framework-app-for-testing-distributed-systems-or-just-network-apps/35854113#35854113
+https://coreemu.github.io/core/install.html#supported-linux-distributions
+https://en.wikipedia.org/wiki/Hole_punching_(networking)
