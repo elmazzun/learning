@@ -22,6 +22,10 @@ Linux. Each directory contains a precise topic.
 
   * `natas`: serverside web-security
 
+* `utils`: some scripts that may be used as helper tools, like a `nmcli`
+
+  wrapper;
+
 ## Misc
 
 * I adhere to [Semantic Commit Messages](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716)
