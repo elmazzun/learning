@@ -3,7 +3,7 @@
 ## Distro
 ```
 $ uname -a
-Linux thinkpad 5.12.9-arch1-1
+Linux thinkpad 5.12.12-arch1-1
 ```
 
 ## Python
