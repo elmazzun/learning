@@ -2,6 +2,8 @@
 
 // https://www.geeksforgeeks.org/implementation-graph-javascript/
 
+const Queue = require('./Queue.js')
+
 class Graph {
 	constructor(verticesNumber) {
 		this.verticesNumber = verticesNumber;
@@ -25,11 +27,46 @@ class Graph {
 			console.log(vertex + ' -> ' + res);
 		}
 	}
-	bfs(v) {
+	bfs(startingNode) {
+	    const visited = {};
+	    const q = new Queue();
 
+	    visited[startingNode] = true;
+	    q.enqueue(startingNode);
+
+	    while (!q.isEmpty()) {
+	        const getQueueElement = q.dequeue();
+	        console.log(getQueueElement);
+
+	        const getList = this.adjList.get(getQueueElement);
+
+	        // loop through the list and add the element to the
+	        // queue if it is not processed yet
+	        for (const i in getList) {
+	            const neigh = getList[i];
+	  
+	            if (!visited[neigh]) {
+	                visited[neigh] = true;
+	                q.enqueue(neigh);
+	            }
+	        }
+	    }
 	}
-	dfs(v) {
-
+	DFSUtil(vert, visited) {
+	    visited[vert] = true;
+	    console.log(vert);
+	  
+	    const get_neighbours = this.AdjList.get(vert);
+	  
+	    for (const i in get_neighbours) {
+	        const get_elem = get_neighbours[i];
+	        if (!visited[get_elem])
+	            this.DFSUtil(get_elem, visited);
+	    }
+	}
+	dfs(startingNode) {
+	    const visited = {};
+	    this.DFSUtil(startingNode, visited);
 	}
 }
 
@@ -49,5 +86,5 @@ g.addEdge('D', 'E');
 g.addEdge('E', 'F');
 g.addEdge('E', 'C');
 g.addEdge('C', 'F');
-
-g.printGraph();
+g.bfs('A');
+// g.printGraph();

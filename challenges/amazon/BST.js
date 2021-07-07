@@ -92,6 +92,27 @@ class BST {
     else // data === node.value && node !== null
       return node;
   }
+  // This function returns pointer to LCA of two given values n1 and n2.
+  // This function assumes that n1 and n2 are present in Binary Tree
+  lca(root, val1, val2) {
+    if (!root || root.value === val1 || root.value === val2) {
+      console.log('caso base')
+      return root;
+    }
+
+    // Look for keys in left and right subtrees
+    let leftLca  = this.lca(root.leftChild, val1, val2);
+    let rightLca = this.lca(root.rightChild, val1, val2);
+ 
+    // If both of the above calls return Non-NULL, then one key
+    // is present in once subtree and other is present in other,
+    // So this node is the LCA
+    if (leftLca && rightLca)
+      return root;
+ 
+    // Otherwise check if left subtree or right subtree is LCA
+    return leftLca ? leftLca: rightLca;
+  }
 }
 
 const bst = new BST();
@@ -108,13 +129,15 @@ bst.add(5);
 bst.add(9);
 bst.add(27);
 const root = bst.getRootNode();
-console.log('About to inorder()')
-bst.inorder(root);
-console.log('About to preorder()')
-bst.preorder(root);
-console.log('About to postorder()')
-bst.postorder(root);
-console.log('min is', bst.findMinNode(root));
-console.log('max is', bst.findMaxNode(root));
-console.log('find existing node (22)', bst.search(root, 22));
-console.log('find not existing node (99)', bst.search(root, 99));
+console.log('got root', root)
+bst.lca(root, 7, 13);
+// console.log('About to inorder()')
+// bst.inorder(root);
+// console.log('About to preorder()')
+// bst.preorder(root);
+// console.log('About to postorder()')
+// bst.postorder(root);
+// console.log('min is', bst.findMinNode(root));
+// console.log('max is', bst.findMaxNode(root));
+// console.log('find existing node (22)', bst.search(root, 22));
+// console.log('find not existing node (99)', bst.search(root, 99));
