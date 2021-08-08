@@ -10,6 +10,8 @@ Linux. Each directory contains a precise topic.
 
   mechanisms.
 
+* `k8s`: learning Kubernetes
+
 * `namespaces`: before learning Docker, explore the kernel primitives that
 
   made possible Docker containers.
