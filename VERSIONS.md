@@ -3,13 +3,13 @@
 ## Distro
 ```
 $ uname -a
-Linux thinkpad 5.12.12-arch1-1
+Linux thinkpad 5.13.8-arch1-1
 ```
 
 ## Python
 ```
 $ pacman -Q python
-python 3.9.5-3
+python 3.9.6-1
 ```
 
 ## Qemu
