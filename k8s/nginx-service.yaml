@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+# specification part contains selector
+spec:
+  # This selector makes a connection between this Service
+  # and the Deployment labeled "app: nginx"
+  selector:
+    app: nginx
+  ports:
+    - protocol: TCP
+      # Port on which this Service receives requests
+      port: 80
+      # Pod port on which the Service forwards requests
+      targetPort: 8080

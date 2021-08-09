@@ -1,21 +1,32 @@
 apiVersion: apps/v1
 kind: Deployment
+# Deployment metadata part contains the label
 metadata:
   name: nginx-deployment
   labels:
     app: nginx
-spec: # specification for deployment
+# Specification for Deployment
+spec:
   replicas: 2
+  # Connecting Deployment with Pod through selector
   selector:
+    # Deployment will connect to all labels with "app: nginx";
+    # this way, Deployment will know which Pods belong to it
     matchLabels:
       app: nginx
+  # template has its own metadata and spec
   template:
+    # Config file inside config file:
+    # following config applies to a Pod
     metadata:
+      # Pod metadata part contains the label
       labels:
         app: nginx
-    spec: # specification for pods
+    # Blueprint for a Pod
+    spec:
+    # Specification for Pods
       containers:
         - name: nginx
           image: nginx:1.16
           ports:
-          - containerPort: 80
+          - containerPort: 8080
