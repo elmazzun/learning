@@ -1,0 +1,59 @@
+# Deployment and Service in one file because they belong together:
+# we can include multiple documents in one file by putting three
+# dashes which in YAML means "document separation"
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongodb-deployment
+  labels:
+    app: mongodb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mongodb
+  template:
+    metadata:
+      labels:
+        app: mongodb
+    spec:
+      containers:
+      - name: mongodb
+        image: mongo
+        ports:
+        # Must match with Selector targetPort
+        - containerPort: 27017
+        # Since Deployment config file is checked into repository,
+        # username and password must not go here: create a Secret
+        # from where we can reference following values
+        env:
+        - name: MONGO_INITDB_ROOT_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: mongodb-secret
+              key: mongo-root-username
+        - name: MONGO_INITDB_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mongodb-secret
+              key: mongo-root-password
+---
+# Internal Service or Cluster IP is DEFAULT
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongodb-service
+spec:
+  # Using selector to link this Service to Deployment above
+  selector:
+    app: mongodb
+  ports:
+    - protocol: TCP
+      # Service port
+      port: 27017
+      # Container port, must match with Deployment containerPort
+      targetPort: 27017
+
+
+
+
