@@ -12,6 +12,8 @@ Linux. Each directory contains a precise topic.
 
 * `k8s`: learning Kubernetes
 
+* `my-os`: as I am devoid of self-love, write some C code telling people that *I am writing my very own kernel*.
+
 * `namespaces`: before learning Docker, explore the kernel primitives that
 
   made possible Docker containers.
