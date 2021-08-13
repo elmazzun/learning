@@ -14,6 +14,7 @@
 .section .multiboot
     .align 4
     .long MB_MAGIC
+    .long MB_FLAGS
     .long MB_CHECKSUM
 
 .section .bss
