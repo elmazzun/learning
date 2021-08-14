@@ -6,29 +6,25 @@ Linux. Each directory contains a precise topic.
 
 ## Structure
 
+* `challenges`: some code challenges, either done out of boredom (`over-the-wire`),  
+
+  or to prepare for job interviews (`amazon`)
+
 * `custom-modules`: using Linux kernel modules in order to explore kernel
 
-  mechanisms.
+  mechanisms
 
 * `k8s`: learning Kubernetes
 
-* `my-os`: as I am devoid of self-love, write some C code telling people that *I am writing my very own kernel*.
+* `my-os`: as I am devoid of self-love, write some C code telling people that  
+
+  *I am writing my very own kernel*
 
 * `namespaces`: before learning Docker, explore the kernel primitives that
 
-  made possible Docker containers.
+  made possible Docker containers
 
-* `over-the-wire`: when I'm bored, I do some of these challenges;
-
-  * `bandit`: as the site says, *this is for absolute beginners* but it is
-
-    better to remember the fundamentals and not to leave gaps in knowledge.
-
-  * `natas`: serverside web-security
-
-* `utils`: some scripts that may be used as helper tools, like a `nmcli`
-
-  wrapper;
+* `utils`: some scripts that may be used as helper tools, like a `nmcli` wrapper
 
 ## Misc
 
