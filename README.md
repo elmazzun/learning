@@ -1,8 +1,8 @@
 # Learning Linux
 
-This repository acts as a personal knowledge store: this is what I learned on
+This repository acts as a personal knowledge store.  
 
-Linux. Each directory contains a precise topic.
+Each directory contains a precise topic.
 
 ## Structure
 
@@ -19,6 +19,8 @@ Linux. Each directory contains a precise topic.
 * `namespaces`: before learning Docker, explore the kernel primitives that
 
   made possible Docker containers
+
+`networks`: learning about net stuff
 
 * `utils`: some scripts that may be used as helper tools, like a `nmcli` wrapper
 
