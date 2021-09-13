@@ -20,7 +20,7 @@ Each directory contains a precise topic.
 
   made possible Docker containers
 
-`networks`: learning about net stuff
+* `networks`: learning about net stuff
 
 * `utils`: some scripts that may be used as helper tools, like a `nmcli` wrapper
 
