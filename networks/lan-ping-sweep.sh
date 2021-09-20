@@ -33,6 +33,6 @@ function ping_sweep() {
 MODEM_ADDR=$(get_modem_ip_addr)
 MY_IP_ADDR=$(get_my_ip_addr)
 
-printf "Up hosts:\n"
+printf "Up hosts (excluding mine $MY_IP_ADDR):\n"
 ping_sweep "$MY_IP_ADDR" "$MODEM_ADDR"
 
